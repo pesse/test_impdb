@@ -1,5 +1,6 @@
 -- Step 1: Identify
-select * from deathstar_users
+select *
+from deathstar_users
 where lower(name) in (
   select lower(name)
   from deathstar_users
