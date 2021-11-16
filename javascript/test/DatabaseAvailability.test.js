@@ -6,9 +6,9 @@ describe("Database Availability", () => {
     /*
      We should never put actual credentials in the code, not even the test code
      So we load the actual credentials from a json-file that should have this structure:
-     { "usern":"", "password":"" }
+     { "user":"", "password":"" }
     */
-   const credentials = require("../credentials.json");
+    const credentials = require("../credentials.json");
     
     async function getConnection() {
         return await oracledb.getConnection({
