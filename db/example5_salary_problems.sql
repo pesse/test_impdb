@@ -62,6 +62,8 @@ alter table t_deathstar_users
 alter table t_deathstar_users
   rename column salary_new to salary;
 
+select name, salary from t_deathstar_users;
+
 -- Step 2: Correct, part 2
 -- Now we can correct the negative salaries - it's so much easier to do this when we have actual numbers
 update t_deathstar_users set
@@ -74,7 +76,7 @@ commit;
 alter table t_deathstar_users
   add check ( salary >= 0 );
 
-select * from deathstar_users;
+select name, salary from deathstar_users;
 
 
 -- It's not possible anymore to add negative salaries or salaries that are not valid numbers

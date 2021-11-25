@@ -13,6 +13,7 @@ select distinct
     )
   )
   || '“' -- 4th adding the closing quotation mark
+    as alignment
 from deathstar_users;
 
 -- Step 2: Correct Alignment
